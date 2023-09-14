@@ -1,1 +1,1 @@
-<h1 align="center">Java Sodium</h1>
+<h1 align="center">Java Maths Implementations</h1>
