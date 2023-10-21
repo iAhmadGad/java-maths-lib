@@ -1,26 +1,58 @@
 package dev.iahmadgad.maths;
 
+import java.util.ArrayList;
+
 public class Function 
 {
-	private String func;
+	private String functionString;
 	
-	public Function(String func)
+	public Function(String functionString)
 	{
-		this.func = func;
+		this.functionString = functionString;
 	}
 	
-	public String getY(String x)
+	public Function(Maths function)
 	{
 		
 	}
 	
-	public String getY(double x)
+	public String getFunctionString()
 	{
-		
+		return functionString;
 	}
 	
-	public String getY(int x)
+	public double get(String x)
 	{
-		
+		return Solver.getValue(functionString.replace("x", '(' + x + ')'));
+	}
+	
+	public double get(double x)
+	{
+		return Solver.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+	}
+	
+	public double get(int x)
+	{
+		return Solver.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+	}
+	
+	public String getType()
+	{
+		return "";
+	}
+	
+	public String getDomain()
+	{
+		return "";
+	}
+	
+	public String getRange()
+	{
+		return "";
+	}
+	
+	public Object lim(int x)
+	{
+		return "";
 	}
 }
