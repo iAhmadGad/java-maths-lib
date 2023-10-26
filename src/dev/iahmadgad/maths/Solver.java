@@ -20,7 +20,8 @@ public class Solver
 	
 	public static double getValue(String sentence)
 	{
-		return Double.parseDouble(solve(Tokener.getTokens(sentence)));
+		ArrayList<String> listVal = Tokener.getTokens(sentence);
+		return Double.parseDouble(solve(listVal));
 	}
 	
 	public static double getValue(ArrayList<String> tokens)
@@ -30,7 +31,7 @@ public class Solver
 	
 	private static String solve(ArrayList<String> tokens)
 	{
-		for(int i = 0; i < tokens.size() && tokens.size() > 1; i++)
+		for(int i = 0; i < tokens.size(); i++)
 		{
 			if(isNestedOperation(tokens.get(i)))
 			{
