@@ -13,7 +13,7 @@ public class Tokener
 		CurrentParse current = CurrentParse.Default;
 		for(int i = 0; i < sentence.length(); i++)
 		{
-			if(Character.isAlphabetic(sentence.charAt(i)) && sentence.charAt(i) != 'x' && current == CurrentParse.Default)
+			if(Character.isAlphabetic(sentence.charAt(i)) && current == CurrentParse.Default)
 			{
 				index++;
 				if(index > 0 && (presentsInteger(list.get(index - 1)) || presentsDouble(list.get(index - 1))))
@@ -91,7 +91,7 @@ public class Tokener
 	
 	private static boolean isOperator(char c)
 	{
-		if(c == '+' || c == '-' || c == '*' || c == 'x' || c == '/' || c == '÷' || c == '^' || c == '!') return true;
+		if(c == '+' || c == '-' || c == '*' || c == '/' || c == '÷' || c == '^' || c == '!') return true;
 		return false;
 	}
 	
