@@ -2,7 +2,7 @@ package dev.iahmadgad.maths;
 
 import java.util.ArrayList;
 
-public class Solver
+public class ValueDefiner
 {
 	public static Object getEnhancedValue(String sentence)
 	{
