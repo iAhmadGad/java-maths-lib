@@ -1,1 +1,1 @@
-<h1 align="center">Java Maths Implementations</h1>
+<h1 align="center">Java Implemented Maths</h1>
