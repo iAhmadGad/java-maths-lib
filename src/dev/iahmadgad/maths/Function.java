@@ -2,6 +2,8 @@ package dev.iahmadgad.maths;
 
 import java.util.ArrayList;
 
+import dev.iahmadgad.maths.util.Constants;
+
 public class Function 
 {
 	private String functionString;
@@ -11,29 +13,34 @@ public class Function
 		this.functionString = functionString;
 	}
 	
-	public Function(Maths function)
-	{
-		
-	}
-	
 	public String getFunctionString()
 	{
 		return functionString;
 	}
 	
-	public double get(String x)
+	public double get(int x)
 	{
-		return Solver.getValue(functionString.replace("x", '(' + x + ')'));
+		return ValueDefiner.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
 	}
 	
 	public double get(double x)
 	{
-		return Solver.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+		return ValueDefiner.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
 	}
 	
-	public double get(int x)
+	public double get(String x)
 	{
-		return Solver.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+		return ValueDefiner.getValue(functionString.replace("x", '(' + x + ')'));
+	}
+	
+	public double get(String parameters, String values)
+	{
+		String params[] = parameters.split(","), vals[] = values.split(","), functionString = this.functionString;
+		for(int i = 0; i < params.length; i++)
+		{
+			functionString = functionString.replace(params[i], '(' + vals[i] + ')');
+		}
+		return ValueDefiner.getValue(functionString);
 	}
 	
 	public String getType()

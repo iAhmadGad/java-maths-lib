@@ -2,6 +2,8 @@ package dev.iahmadgad.maths;
 
 import java.util.ArrayList;
 
+import dev.iahmadgad.maths.util.Standard;
+
 public class ValueDefiner
 {
 	public static Object getEnhancedValue(String sentence)
