@@ -20,17 +20,17 @@ public class Function
 	
 	public double get(int x)
 	{
-		return ValueDefiner.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+		return OperationSolver.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
 	}
 	
 	public double get(double x)
 	{
-		return ValueDefiner.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
+		return OperationSolver.getValue(functionString.replace("x", '(' + String.valueOf(x) + ')'));
 	}
 	
 	public double get(String x)
 	{
-		return ValueDefiner.getValue(functionString.replace("x", '(' + x + ')'));
+		return OperationSolver.getValue(functionString.replace("x", '(' + x + ')'));
 	}
 	
 	public double get(String parameters, String values)
@@ -40,7 +40,7 @@ public class Function
 		{
 			functionString = functionString.replace(params[i], '(' + vals[i] + ')');
 		}
-		return ValueDefiner.getValue(functionString);
+		return OperationSolver.getValue(functionString);
 	}
 	
 	public String getType()

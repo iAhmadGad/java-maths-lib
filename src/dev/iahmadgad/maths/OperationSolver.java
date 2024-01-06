@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import dev.iahmadgad.maths.util.Standard;
 
-public class ValueDefiner
+public class OperationSolver
 {
 	public static Object getEnhancedValue(String sentence)
 	{
