@@ -2,7 +2,7 @@ package dev.iahmadgad.maths.util;
 
 public class Standard
 {
-	public static double factorial(double n)
+	public static int factorial(int n)
 	{
 		if(n == 1) return n;
 		else return n * factorial(n - 1);
