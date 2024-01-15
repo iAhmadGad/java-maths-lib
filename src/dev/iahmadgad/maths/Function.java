@@ -2,8 +2,6 @@ package dev.iahmadgad.maths;
 
 import java.util.ArrayList;
 
-import dev.iahmadgad.maths.util.Constants;
-
 public class Function 
 {
 	private String functionString;
